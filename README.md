@@ -1,3 +1,3 @@
-# MapReduce-Cooccurence
+# MapReduce - KMeans
 
 Big Data Assignment
