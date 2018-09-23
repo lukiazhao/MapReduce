@@ -1,0 +1,3 @@
+As I said, this is quick and dirty, and is going to make every scene look different. Color correction of satellite imagery is a vast topic. I’ve written two guides, one with Landsat 8 and one with PlanetScope data—they’re the process for both works fairly well for RapidEye. Tom Patterson of the National Park Service and Mapbox have both written guides that I recommend, too.
+
+hadoop jar /home/hadoop/WordCoocStripe.jar stripe /user/jingyi/Testing.txt /user/jingyi/output12 /home/hadoop/WordCoocStripe.jar
