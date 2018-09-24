@@ -9,11 +9,11 @@ import org.apache.hadoop.mapreduce.Reducer;
 
 public class StripeReducer extends Reducer<Text, WritableHashMap, Text, WritableHashMap> {
 
-	private WritableHashMap incrementingMap = new WritableHashMap();
+	private WritableHashMap reduceMap = new WritableHashMap();
 
     //@Override
     protected void reduce(Text key, Iterable<WritableHashMap> maps, Context context) throws IOException, InterruptedException {
-        incrementingMap.clear();
+    	reduceMap.clear();
         // for each HashMap with the same key
         for (WritableHashMap map : maps) {
         	
@@ -24,15 +24,15 @@ public class StripeReducer extends Reducer<Text, WritableHashMap, Text, Writable
 	        	
 	        	LongWritable sumForEachKey = (LongWritable) map.get(k);
 	        	
-	        	if (!incrementingMap.containsKey(k)) {
-	        		incrementingMap.put(k, sumForEachKey);
+	        	if (!reduceMap.containsKey(k)) {
+	        		reduceMap.put(k, sumForEachKey);
 	        	} else {
-	        		LongWritable currentSum = (LongWritable) incrementingMap.get(k);
+	        		LongWritable currentSum = (LongWritable) reduceMap.get(k);
 	        		currentSum.set(currentSum.get() + sumForEachKey.get());
 	        	}        	
 	        }
 
         }
-        context.write(key, incrementingMap);
+        context.write(key, reduceMap);
     }
 }
