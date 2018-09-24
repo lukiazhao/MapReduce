@@ -59,8 +59,8 @@ public class PairMapper extends Mapper<Text, ArchiveReader, WordPair, LongWritab
 		// Set the window with a value of 2. This means the co-occurrence for a word include the two words before it and the two words after it.
 		int neighbours = context.getConfiguration().getInt("neighbors", 2);
 				
-		// split by space or multiple space.
-        String[] tokens = content.split("\\s+");
+		// split by space or multiple space and non-word character.
+        String[] tokens = content.split("\\W+");
 		if (tokens.length > 1) {
 		        	
 			for (int i = 0; i < tokens.length; i++) {

@@ -41,7 +41,7 @@ public class StripeMapper extends Mapper<Text, ArchiveReader, Text, WritableHash
 	protected void emitStripe(Context context, String content) throws IOException, InterruptedException {
 		
 		int neighbors = context.getConfiguration().getInt("neighbors", 2);
-		String[] tokens = content.split("\\s+");
+		String[] tokens = content.split("\\W+");
 		
 		if (tokens.length > 1) {
 			

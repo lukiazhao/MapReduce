@@ -37,8 +37,8 @@ public class WordCooc extends Configured implements Tool {
        Configuration configuration = getConf();
 	    configuration.set("mapreduce.job.jar", args[3]);
 	    
-		String inputPath = "/tmp/*.warc.wet.gz";
-		LOGGER.info("Input path: " + inputPath);
+//		String inputPath = "/tmp/*.warc.wet.gz";
+		LOGGER.info("Input path: " + args[1]);
 
        // create job
        Job job = new Job(configuration, "Cooccurence");

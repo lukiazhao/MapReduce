@@ -6,7 +6,7 @@
   <version>0.3-SNAPSHOT</version>
   <packaging>jar</packaging>  
 
-  <name>cc-warc-examples</name>
+  <name>word Co-occurence</name>
   <description>
     Common Crawl WARC Examples.
     Contains both wrappers for processing WARC files in Hadoop MapReduce jobs and Hadoop examples to get you started.
