@@ -26,3 +26,5 @@ hadoop jar /home/hadoop/cc-warc-examples-0.3-SNAPSHOT-jar-with-dependencies.jar 
 
 格式：
 Hadoop     jar     /home/hadoop/cc-warc-examples-0.3-SNAPSHOT-jar-with-dependencies.jar WordCooc    [pair | stripe]     input/path/     /output/path     /home/hadoop/cc-warc-examples-0.3-SNAPSHOT-jar-with-dependencies.jar
+
+**input path can be + /tmp/*.warc.wet.gz**
