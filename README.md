@@ -16,6 +16,8 @@ Optimisation:
 - partitioner
 - local aggregation
 
+** Important Reference **
+http://codingjunkie.net/cooccurrence/
 
 ** How to run **
 hadoop jar /home/hadoop/cc-warc-examples-0.3-SNAPSHOT-jar-with-dependencies.jar WordCooc pair s3a://commoncrawl/crawl-data/CC-MAIN-2018-17/segments/1524125936833.6/wet/CC-MAIN-20180419091546-20180419111546-00000.warc.wet.gz /user/jingyi/output1.txt /home/hadoop/cc-warc-examples-0.3-SNAPSHOT-jar-with-dependencies.jar
