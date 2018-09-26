@@ -1,3 +1,5 @@
+package mapreduce;
+
 import java.io.IOException;
 import java.util.Map;
 import java.util.Set;
@@ -10,6 +12,7 @@ import org.apache.hadoop.mapreduce.Reducer;
 public class StripeReducer extends Reducer<Text, WritableHashMap, Text, WritableHashMap> {
 
 	private WritableHashMap incrementingMap = new WritableHashMap();
+	
 
     //@Override
     protected void reduce(Text key, Iterable<WritableHashMap> maps, Context context) throws IOException, InterruptedException {

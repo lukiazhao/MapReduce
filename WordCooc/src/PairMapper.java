@@ -29,8 +29,7 @@ public class PairMapper extends Mapper<LongWritable,Text, WordPair, LongWritable
 		for (int i=0; i < a.length - 1; i++){
 	
 			outputKey.set(a[i]+" "+a[i+1]);
-			context.write(outputKey,  new IntWritable(1));
-	
+			context.write(outputKey,  new IntWritable(1));	
 		}
 		*/
 		
@@ -53,7 +52,7 @@ public class PairMapper extends Mapper<LongWritable,Text, WordPair, LongWritable
 		int neighbours = context.getConfiguration().getInt("neighbors", 2);
 		
 		// split by space or multiple space.
-        String[] tokens = value.toString().split("\\s+");
+        String[] tokens = value.toString().split("\\W+");
         if (tokens.length > 1) {
         	
         	
@@ -76,8 +75,7 @@ public class PairMapper extends Mapper<LongWritable,Text, WordPair, LongWritable
 	                   wordPair.setNeighbor(tokens[j]);
 	                   context.write(wordPair, ONE);
 	             }
-	             
-
+	            
           }
       }	
 	}

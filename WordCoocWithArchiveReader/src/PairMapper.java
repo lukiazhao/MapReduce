@@ -4,7 +4,7 @@ import java.util.Iterator;
 import org.apache.hadoop.io.LongWritable;
 import org.apache.hadoop.io.Text;
 import org.apache.hadoop.mapreduce.Mapper;
-//import org.apache.log4j.Logger;
+// import org.apache.log4j.Logger;
 import org.archive.io.ArchiveReader;
 import org.archive.io.ArchiveRecord;
 import org.apache.commons.io.IOUtils;
@@ -18,7 +18,7 @@ public class PairMapper extends Mapper<Text, ArchiveReader, WordPair, LongWritab
 //	private Text word = new Text();
 	private WordPair wordPair = new WordPair();
     private static LongWritable ONE = new LongWritable(1);
-//	private static final Logger LOG = Logger.getLogger(PairMapper.class);
+	// private static final Logger LOG = Logger.getLogger(PairMapper.class);
 
 	
 	@Override

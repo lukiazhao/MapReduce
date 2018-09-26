@@ -6,15 +6,26 @@ Compare product_title && star_rating by using pairs and stripes
 
 Lukia - Stripe 
 Oliver - Pairs  
+** Data :
+- Lukia: stripe - 400mb from cluster 2 - 12 | size from 400, 1GB,  1.4GB, 2GB
+- Oliver: pair - 400mb | size from 400, 1GB,  1.4GB, 2GB
 
-1. export output data into .csv
- 
-2. compare with and without optimisation approaches.
+On 400mb: 
+- Lukia : combiner remove | add local aggregation, add combiner. 
+
+Report: 
+- Lukia: Mapreduce program explianation 
+- Oliver: Graph and analysis 
+
+- Compare: saturday 
+
 
 Optimisation:
 - combiner
 - partitioner
 - local aggregation
+
+
 
 
 ** How to run **
