@@ -29,32 +29,6 @@ public class PairMapper extends Mapper<LongWritable,Text, WordPair, LongWritable
 	@Override
 	public void map(LongWritable inputKey,Text value, Context context) throws IOException, InterruptedException {
 		
-		// original mapper without any combiner
-		/*
-	     String line = inputVal.toString();
-	     String[] a=line.split("\\W+");
-
-		for (int i=0; i < a.length - 1; i++){
-	
-			outputKey.set(a[i]+" "+a[i+1]);
-			context.write(outputKey,  new IntWritable(1));	
-		}
-		*/
-		
-		
-		// in-mapper combiner
-		
-//		StringTokenizer tokenizer = new StringTokenizer(inputVal.toString());
-//		
-//        while (tokenizer.hasMoreTokens()) {
-//            String word = tokenizer.nextToken();
-//            if (buffer.containsKey(word)) {
-//                buffer.put(word, buffer.get(word) + 1);
-//            } else {
-//                buffer.put(word, 1);
-//            }
-//        }
-		
 		// test
 		WordPair a = new WordPair();
     	a.setWord("a first"); a.setNeighbor("a second");
